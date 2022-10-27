@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 30400
 ## X-Curse-Packaged-Version: v1.4.4
 ## X-Curse-Project-Name: DiminishingReturns
 ## X-Curse-Project-ID: diminishingreturns
@@ -13,7 +13,7 @@
 ## X-Date: 2014-11-25T06:34:32Z
 
 ## SavedVariables: DiminishingReturnsDB
-## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplateRegistry-1.0, ButtonFacade, LibButtonFacade, AdiDebug
+## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplateRegistry-1.0, ButtonFacade, LibButtonFacade, AdiDebug, Gladdy
 ## X-Embeds: LibStub, CallbackHandler-1.0, AceDB-3.0, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplateRegistry-1.0
 
 ## LoadManagers: AddonLoader
@@ -38,6 +38,7 @@ support\ag_UnitFrames.lua
 support\Blizzard.lua
 support\Blizzard_ArenaUI.lua
 support\Gladius.lua
+support\Gladdy.lua
 support\oUF.lua
 support\Nameplates.lua
 support\PitBull4.lua
