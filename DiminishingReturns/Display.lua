@@ -261,6 +261,7 @@ function frameProto:UpdateDR(event, guid, cat, isFriend, texture, count, duratio
 	if (guid ~= self.guid or (isFriend and not addon.db.profile.friendly)) and not addon.testMode then
 		return
 	end
+
 	if count == 0 or (count < 3 and addon.db.profile.immunityOnly) then
 		self:RemoveDR(event, guid, cat)
 		return true
@@ -291,6 +292,7 @@ function frameProto:RefreshAllIcons()
 	wipe(activeIcons)
 	if self.guid or addon.testMode then
 		local guid = self.guid
+
 		for cat, isFriend, texture, count, duration, expireTime in addon:IterateDR(guid) do
 			self:UpdateDR("UpdateGUID", guid, cat, isFriend, texture, count, duration, expireTime)
 		end
@@ -302,6 +304,7 @@ end
 
 function frameProto:UpdateGUID()
 	local guid = self:GetGUID()
+	print(guid, self.guid)
 	if guid == self.guid then return end
 	self.guid = guid
 	self:RefreshAllIcons()
@@ -317,6 +320,7 @@ function frameProto:UpdateStatus()
 			self:RegisterMessage('RemoveDR')
 			self:OnEnable()
 		end
+
 		if not self:UpdateGUID() then
 			self:RefreshAllIcons()
 		end
@@ -423,7 +427,8 @@ local function OnSecureDisable(self)
 end
 
 local function GetSecureGUID(self)
-	return UnitGUID(self:GetUnit())
+	local unit = self:GetUnit()
+	return UnitGUID(self:GetUnit()) or unit
 end
 
 function addon:SpawnFrame(anchor, secure, GetDatabase)
