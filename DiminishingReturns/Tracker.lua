@@ -243,8 +243,8 @@ local function ParseCLEU(arg1, timestamp, event, arg2, arg3, srcName, srcFlags, 
 	return SpawnDR(guid, category, isFriend, increase, addon.db.profile.resetDelay)
 end
 
-local function SpawnTestDR(unit, mysteryUnit)
-	local guid = UnitGUID(mysteryUnit or unit)
+local function SpawnTestDR(unit)
+	local guid = UnitGUID(unit)
 	if guid then
 		local isFriend = UnitCanAssist("player", unit)
 		local count = 1
@@ -264,7 +264,6 @@ function addon:SpawnTestDR()
 	if not UnitIsUnit("pet", "focus") and not UnitIsUnit("player", "focus") and not UnitIsUnit("target", "focus") then
 		SpawnTestDR("focus")
 	end
-	SpawnTestDR("arena1", "player")
 end
 
 local function WipeAll(self)
