@@ -23,8 +23,7 @@ local L = {
 	["Scatter Shot"] = "Scatter Shot",
 	["Silences"] = "Silences",
 	["Hibernate"] = "Hibernate",
-	["Taunts"] = "Taunts",
-	["Dragonbreath"] = "Dragon`s Breath",
+	["Taunts"] = "Taunts"
 }
 
 if GetLocale() == "frFR" then
@@ -92,12 +91,12 @@ Data.spells = {
 	[51724] = "disorient",
 
 	-- Dragon's Breath
-	[31661] = "dragonbreath",
-	[33041] = "dragonbreath",
-	[33042] = "dragonbreath",
-	[33043] = "dragonbreath",
-	[42949] = "dragonbreath",
-	[42950] = "dragonbreath",
+	[31661] = "scatters",
+	[33041] = "scatters",
+	[33042] = "scatters",
+	[33043] = "scatters",
+	[42949] = "scatters",
+	[42950] = "scatters",
 
 	-- Gouge
 	[1776] = "disorient",
@@ -466,7 +465,6 @@ Data.categoryNames = {
 	["silence"] = L["Silences"],
 	["sleep"] = L["Hibernate"],
 	["taunt"] = L["Taunts"],
-	["dragonbreath"] = L["Dragonbreath"],
 }
 
 -- Categories that have DR in PvE as well as PvP
